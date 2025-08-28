@@ -128,7 +128,7 @@ https://ai.meta.com/dinov3/
 - [Xia et al., 2024 - CSV-Filter: a deep learning-based comprehensive structural variant filtering method](https://doi.org/10.1093/bioinformatics/btae539)
 - [Zhou et al., 2024 - DNABERT-2: Efficient foundation model and benchmark for multi-species genome](https://iclr.cc/media/iclr-2024/Slides/17823.pdf)
 - [Poplin et al., 2018 - A universal SNP and small-indel variant caller using deep neural networks](https://www.nature.com/articles/nbt.4235)
-- [Siméoni, O., Vo, H. V., Seitzer, M., Baldassarre, F., Oquab, M., Jose, C., ... & Bojanowski, P. (2025). DINOv3. arXiv preprint arXiv:2508.10104.](https://ai.meta.com/research/publications/dinov3/)
+- [Siméoni, O., Vo, H. V., Seitzer, M., Baldassarre, F., Oquab, M., Jose, C., ... & Bojanowski, P. (2025). DINOv3.](https://ai.meta.com/research/publications/dinov3/)
 
 
 <img width="1352" height="878" alt="Team" src="https://github.com/user-attachments/assets/f9951778-e819-4a98-b38b-4280d15ab21d" />
