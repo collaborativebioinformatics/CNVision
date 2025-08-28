@@ -8,7 +8,8 @@ Our goal is to enhance copy number (CNV) calling and filtering using advanced ma
 
 ## Methods
 
-<img width="720" height="583" alt="image" src="https://github.com/user-attachments/assets/6de24e3c-7aaa-44c5-9ff4-db1060880f1d" />
+<img width="1256" height="1462" alt="image" src="https://github.com/user-attachments/assets/06ff29ad-e052-480e-ae0d-50a13b41d93a" />
+
 
 
 Figure 1. Methods Flowchart. Descriptive flow chart of methodology.  
