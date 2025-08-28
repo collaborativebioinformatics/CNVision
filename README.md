@@ -11,6 +11,8 @@ Our goal is to enhance copy number (CNV) calling and filtering using advanced ma
 <img width="1256" height="1462" alt="image" src="https://github.com/user-attachments/assets/06ff29ad-e052-480e-ae0d-50a13b41d93a" />
 
 
+Figure 1. Methods Flowchart. Descriptive flow chart of methodology.  
+
 
 
 
@@ -29,6 +31,35 @@ pip uninstall triton
 
 
 ## Module 1 (data preprocessing)
+
+Downloading data
+
+```
+#HG002_sup_PAW70337_based_alignment_and_call_files: 
+aws s3 cp s3://ont-open-data/giab_2025.01/analysis/wf-human-variation/sup/HG002/PAW70337/output/SAMPLE.haplotagged.cram   ./ --no-sign-request
+aws s3 cp s3://ont-open-data/giab_2025.01/analysis/wf-human-variation/sup/HG002/PAW70337/output/SAMPLE.haplotagged.cram.crai ./ --no-sign-request
+echo "done downloading samples-cram files"
+
+
+
+#reference fasta - GRCh38
+wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz
+echo "done downloading cram specific-fasta file"
+gunzip GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz 
+samtools faidx GCA_000001405.15_GRCh38_no_alt_analysis_set.fna
+echo "done indexing fasta"
+```
+
+
+
+```
+# CNV (Spectre)
+aws s3 cp s3://ont-open-data/giab_2025.01/analysis/wf-human-variation/sup/HG002/PAW70337/output/SAMPLE.wf_cnv.vcf.gz   ./ --no-sign-request
+aws s3 cp s3://ont-open-data/giab_2025.01/analysis/wf-human-variation/sup/HG002/PAW70337/output/SAMPLE.wf_cnv.vcf.gz.tbi ./ --no-sign-request
+echo "done downloading Spectre VCF files"
+```
+(We are generating CNVs from the newest version of software.)
+
 
 
 
@@ -72,7 +103,25 @@ python finetune.py \
 ```
 
 
-Figure 1. Methods Flowchart. Descriptive flow chart of methodology.  
+
+## Module 3 ( Image Encoding)
+
+BAM data preprocess from CSV-Filter
+```
+python bam2depth.py
+```
+
+
+
+
+## Module 4 ( Image Embeddings )
+
+Self-supervised learning for vision at unprecedented scale
+
+https://ai.meta.com/dinov3/
+
+
+
 
 ## Relevant Papers
 - [Smolka et al., 2024 - Detection of mosaic and population-level structural variants with Sniffles2](https://doi.org/10.1038/s41587-023-02024-y)
