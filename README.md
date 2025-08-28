@@ -12,6 +12,66 @@ Our goal is to enhance copy number (CNV) calling and filtering using advanced ma
 
 
 
+
+
+
+### Build environment
+```
+# create and activate virtual python environment
+conda create -n dna python=3.8
+conda activate dna
+
+# install required packages
+pip install -r requirements.txt
+pip uninstall triton
+````
+
+
+
+## Module 1 (data preprocessing)
+
+
+
+## Module 2 (LLM )
+
+### Scripts for Genome Foundation Model encoding, embedding and fine-tuning
+
+Here are two scripts:
+1. encoding_embedding.py that provide examples of using DNABERT-2 (or any similar model like Nucleotide Transformers) to encode and embed DNA sequences.
+2. finetune.py that allow finetuning of DNABERT-2 and similar models on a sequence classfication or regression dataset.
+
+
+```
+dna_sequences = ["CAGTACGTACGATCGATCG", "CAGTCAGTCGATCGATCGATCG"]
+model_name = "zhihan1996/DNABERT-2-117M"
+encoding = encode_sequence(dna_sequences, model_name)
+print(encoding)
+```
+
+
+```
+python finetune.py \
+    --model_name_or_path $model_name \
+    --data_path  $data_path \
+    --kmer -1 \
+    --run_name DNABERT2_run \
+    --model_max_length $max_length \
+    --per_device_train_batch_size 8 \
+    --per_device_eval_batch_size 16 \
+    --gradient_accumulation_steps 1 \
+    --learning_rate 3e-5 \
+    --num_train_epochs 3 \
+    --fp16 \
+    --save_steps 200 \
+    --output_dir output/dnabert2 \
+    --evaluation_strategy steps \
+    --eval_steps 200 \
+    --warmup_ratio 0.1 \
+    --logging_steps 100000 \
+    --find_unused_parameters False
+```
+
+
 Figure 1. Methods Flowchart. Descriptive flow chart of methodology.  
 
 ## Relevant Papers
