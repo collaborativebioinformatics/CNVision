@@ -14,8 +14,8 @@ In parallel with sequence embedding, we generated image-based representations of
 
 <img width="1256" height="1462" alt="image" src="https://github.com/user-attachments/assets/06ff29ad-e052-480e-ae0d-50a13b41d93a" />
 
+<div align="center" style="text-align: center"> <b> Figure </b>: Methods Flowchart. Descriptive flow chart of methodology.   </div>
 
-Figure 1. Methods Flowchart. Descriptive flow chart of methodology.  
 
 
 
