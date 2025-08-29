@@ -124,11 +124,11 @@ For each candidate CNV:
 </br>
 
 <div align="center">
-    <img width="256" height="256" alt="image" src="Image_Encoding_Module/HG002_GRCh38_TP_chr22_50680403_50680489_DEL_86bp.png" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-<img width="256" height="256" alt="image" src="Image_Encoding_Module/HG002_GRCh38_TP_chr22_50716010_50716092_DEL_82bp.png" />
+<img width="1000" alt="image" src="Image_Encoding_Module/Screenshot%201404-06-07%20at%2018.37.22.png" />
 </div>
-
+</br>
+Figure: Image generation from CIGAR strings as developed by Xia et al. (2024). Alignment patterns are extracted from CIGAR strings and developed into RGB images for convolutional neural network training.
 
 
 ## Module 4 ( Image Embeddings )
