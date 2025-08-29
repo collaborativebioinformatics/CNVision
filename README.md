@@ -37,6 +37,7 @@ pip uninstall triton
 ## Module 1 (data preprocessing)
 
 Data generation for the pipeline.
+<img align="center" style="text-align: center" width="1000" alt="image" src="Data_Module/datageneration.png" />
 
 ```
 #HG002_sup_PAW70337_based_alignment_and_call_files: 
