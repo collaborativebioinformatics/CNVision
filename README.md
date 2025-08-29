@@ -1,6 +1,6 @@
 # CNVision
 
-<img align="center" style="text-align: center" width="1000" alt="image" src="Image_Embedding_Module/CNV.png" />
+<img align="center" style="text-align: center" width="500" alt="image" src="Image_Embedding_Module/CNV.png" />
 
 
 ## Contributors
