@@ -116,9 +116,9 @@ python bam2depth.py
 ```
 
 <div align="center">
-    <img width="128" height="128" alt="image" src="Image_Encoding_Module/HG002_GRCh38_TP_chr22_50680403_50680489_DEL_86bp.png" />
+    <img width="256" height="256" alt="image" src="Image_Encoding_Module/HG002_GRCh38_TP_chr22_50680403_50680489_DEL_86bp.png" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-<img width="128" height="128" alt="image" src="Image_Encoding_Module/HG002_GRCh38_TP_chr22_50716010_50716092_DEL_82bp.png" />
+<img width="256" height="256" alt="image" src="Image_Encoding_Module/HG002_GRCh38_TP_chr22_50716010_50716092_DEL_82bp.png" />
 </div>
 
 
