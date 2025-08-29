@@ -144,6 +144,8 @@ The images are embedded using DINOv3, a self-supervised vision transformer, whic
 https://ai.meta.com/dinov3/
 
 
+## Module 5 ( Filtering and Evaluation )
+
 
 
 ## Relevant Papers
