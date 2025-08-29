@@ -262,7 +262,7 @@ python finetune_lora_vit.py \
 "epoch": 9, "train_loss": 0.367
 
 
-Newest epoch:  train_loss: 0.23
+Newest epoch:  train_loss: 0.231
 ```
 
 
