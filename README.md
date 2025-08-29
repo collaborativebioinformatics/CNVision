@@ -207,7 +207,7 @@ https://ai.meta.com/dinov3/
 
 ## Module 5 ( Filtering and Evaluation )
 
-## ⏩ Quick Start
+#### Quick Start
 
 Each sub-command contains help documentation. Start with `truvari -h` to see available commands.
 
