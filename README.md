@@ -1,5 +1,7 @@
 # CNVision
 
+<img align="center" style="text-align: center" width="1000" alt="image" src="Image_Embedding_Module/CNV.png" />
+
 
 ## Contributors
 Sina Majidian (👑 Group Lead), Archit Kalra (👑 Group Lead), Philippe Sanio, Muteeba Azhar, Thomas Krannich, Zhihan Zhou, Narges SangaraniPour, Jasmine Baker, Gerald McCollam, Kavya Vaddadi, Jinhao Wang, Fazel Amirvahedi, Hanan Wees
