@@ -14,8 +14,8 @@ In parallel with sequence embedding, we generated image-based representations of
 
 <img width="1256" height="1462" alt="image" src="https://github.com/user-attachments/assets/06ff29ad-e052-480e-ae0d-50a13b41d93a" />
 
+<div align="center" style="text-align: center"> <b> Figure </b>: Methods Flowchart. Descriptive flow chart of methodology.   </div>
 
-Figure 1. Methods Flowchart. Descriptive flow chart of methodology.  
 
 
 
@@ -114,8 +114,21 @@ BAM data preprocess from CSV-Filter
 ```
 python bam2depth.py
 ```
+</br>
 
+For each candidate CNV:
+- All reads are gathered overlapping the variant locus within a ±500 bp window.
+- Alignment patterns are extracted from CIGAR strings.
+- 224×224 pixel images are directly generated with four separate channels, where each channel captures specific CIGAR alignment operations: matches, deletions, insertions and soft-clips.
+- To enable compatibility with image models, these 4-channel images are converted to 3-channel RGB format using a grayscale encoding where Match=1, Deletion=2, Insertion=3, and Soft-clip=4, then replicating this grayscale across all three RGB channels. 
+</br>
 
+<div align="center">
+
+<img width="1000" alt="image" src="Image_Encoding_Module/Screenshot%201404-06-07%20at%2018.37.22.png" />
+</div>
+</br>
+<div align="center" style="text-align: center"> <b> Figure </b>: Image generation from CIGAR strings as developed by Xia et al. (2024). Alignment patterns are extracted from CIGAR strings and developed into RGB images for convolutional neural network training. </div>
 
 
 ## Module 4 ( Image Embeddings )
