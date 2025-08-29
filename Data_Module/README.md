@@ -1,7 +1,7 @@
 
 ## Module 1 (data preprocessing)
 
-Downloading data
+### Downloading data
 
 ```
 #HG002_sup_PAW70337_based_alignment_and_call_files: 
@@ -28,5 +28,14 @@ aws s3 cp s3://ont-open-data/giab_2025.01/analysis/wf-human-variation/sup/HG002/
 echo "done downloading Spectre VCF files"
 ```
 (We are generating CNVs from the newest version of software.)
+
+### Visualizing data
+
+Use the `plot-svlen.R` to plot all SV lengths (>100nt) from a given VCF file. Requires `bcftools` and `Rscript` in your working environment.
+
+Example command to plot deletions (DEL) from a given VCF file: 
+```bash
+bcftools query -i 'SVTYPE="DEL"' -f '%INFO/SVLEN\n' <input>.vcf.gz | awk '{print $1}' | Rscript plot-svlen.R <output-prefix>
+```
 
 
