@@ -246,12 +246,30 @@ python finetune_lora_vit.py \
 <div align="center" style="text-align: center"> <b> Figure </b>: DINOv3 data curation and model development stages. </div>
 
 </br>
-https://ai.meta.com/dinov3/
+
+
+## Training loss function
+```
+"epoch": 0, "train_loss": 0.789
+"epoch": 1, "train_loss": 0.407
+"epoch": 2, "train_loss": 0.376
+"epoch": 3, "train_loss": 0.386
+"epoch": 4, "train_loss": 0.373
+"epoch": 5, "train_loss": 0.371
+"epoch": 6, "train_loss": 0.388
+"epoch": 7, "train_loss": 0.374
+"epoch": 8, "train_loss": 0.391
+"epoch": 9, "train_loss": 0.367
+
+
+Newest epoch:  train_loss: 0.23
+```
+
+
 
 
 ## Module 5 ( Filtering and Evaluation )
 
-#### Quick Start
 
 Each sub-command contains help documentation. Start with `truvari -h` to see available commands.
 
