@@ -72,6 +72,8 @@ echo "done downloading Spectre VCF files"
 spectre CNVCaller --coverage cov/coverage.regions.bed.gz --sample-id HG002 --output-dir ./spectre_out --reference GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz --blacklist grch38_blacklist_spectre.bed  --ploidy-chr chrX:1 --min-cnv-len 25000 --metadata spectre_out/metadata.mdr
 ```
 
+<img width="1256" height="1462" alt="image" src="Data_Module/del-length-histo.png" />
+
 
 
 ## Module 2 (LLM )
