@@ -135,11 +135,12 @@ For each candidate CNV:
 Self-supervised learning for vision at unprecedented scale
 
 The images are embedded using DINOv3, a self-supervised vision transformer, which is also fine-tuned on a train/test split to enhance classification accuracy.
+</br>
 <img align="center" style="text-align: center" width="1000" alt="image" src="Image_Embedding_Module/dinov3.png" />
 </br>
 <div align="center" style="text-align: center"> <b> Figure </b>: DINOv3 data curation and model development stages. </div>
 
-
+</br>
 https://ai.meta.com/dinov3/
 
 
