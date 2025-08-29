@@ -156,19 +156,6 @@ For each candidate CNV:
 
 
 
-<p align="center">
-  <b>Image embeddings from NPSV-deep </b><br>
-  Encodes nine input channels used for structural variant classification:<br>
-  1. Read allele assignment &nbsp;
-  2. Haplotag &nbsp;
-  3. Base quality &nbsp;
-  4. Strand &nbsp;
-  5. Mapping quality &nbsp;
-  6. Fragment allele assignment &nbsp;
-  7. Alternate insert size &nbsp;
-  8. Reference insert size &nbsp;
-  9. Aligned bases (matched or soft-clipped)
-</p>
 
 
 
