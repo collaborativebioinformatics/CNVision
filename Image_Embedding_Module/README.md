@@ -18,3 +18,21 @@ https://github.com/xcxw127/CSV-Filter/tree/main
                     max_terminal += length
         cigars_img1 = resize(cigars_img)
 ```
+
+## Training metadata (images under DIR)
+```
+python make_meta.py /path/to/DIR meta.csv
+```
+
+## Inference metadata
+```
+python make_meta_infer.py /path/to/DIR meta_infer.csv
+```
+## Finetune (ViT + LoRA)
+```
+python finetune_lora_vit.py \
+  --csv meta.csv \
+  --group_by event_id \
+  --workers 2 \
+  --batch 256
+```
