@@ -207,6 +207,26 @@ https://ai.meta.com/dinov3/
 
 ## Module 5 ( Filtering and Evaluation )
 
+## ⏩ Quick Start
+
+Each sub-command contains help documentation. Start with `truvari -h` to see available commands.
+
+The current most common Truvari use case is for structural variation benchmarking:
+```
+  truvari bench -b base.vcf.gz -c comp.vcf.gz -f reference.fa -o output_dir/
+```
+
+Find more matches by harmonizing phased variants using refine:
+```
+   truvari refine output_dir/
+```
+
+Use Truvari's comparison engine to consolidate redundant variants in a merged multi-sample VCF:
+```
+    bcftools merge -m none sampleA.vcf.gz sampleB.vcf.gz | bgzip > merge.vcf.gz
+    tabix merge.vcf.gz
+    truvari collapse -i merge.vcf.gz -o truvari_merge.vcf
+```
 
 
 ## Relevant Papers
