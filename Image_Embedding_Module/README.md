@@ -19,7 +19,7 @@ https://github.com/xcxw127/CSV-Filter/tree/main
         cigars_img1 = resize(cigars_img)
 ```
 
-## Training metadata (images under DIR)
+## Training metadata (image tensors under DIR)
 ```
 python make_meta.py /path/to/DIR meta.csv
 ```
