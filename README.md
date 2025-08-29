@@ -36,7 +36,7 @@ pip uninstall triton
 
 ## Module 1 (data preprocessing)
 
-Downloading data
+Data generation for the pipeline.
 
 ```
 #HG002_sup_PAW70337_based_alignment_and_call_files: 
