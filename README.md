@@ -144,6 +144,24 @@ For each candidate CNV:
 Self-supervised learning for vision at unprecedented scale
 
 The images are embedded using DINOv3, a self-supervised vision transformer, which is also fine-tuned on a train/test split to enhance classification accuracy.
+#### Training metadata (image tensors under DIR)
+```
+python make_meta.py /path/to/DIR meta.csv
+```
+
+#### Inference metadata
+```
+python make_meta_infer.py /path/to/DIR meta_infer.csv
+```
+#### Finetune (ViT + LoRA)
+```
+python finetune_lora_vit.py \
+  --csv meta.csv \
+  --group_by event_id \
+  --workers 2 \
+  --batch 256
+```
+
 </br>
 <img align="center" style="text-align: center" width="1000" alt="image" src="Image_Embedding_Module/dinov3.png" />
 </br>
