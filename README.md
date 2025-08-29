@@ -151,13 +151,12 @@ For each candidate CNV:
 
 #### Image Embedding from NPSV-deep 
 
-<p align="center">
-  <img src="Image_Encoding_Module/variant0.png" alt="variant0" width="400"/>
-  <img src="Image_Encoding_Module/variant2.png" alt="variant2" width="400"/>
-</p>
+<img src="Image_Encoding_Module/variant0.png" alt="variant0" width="500"/>
+<img src="Image_Encoding_Module/variant2.png" alt="variant2" width="500"/>
+
 
 <p align="center">
-  <b>Image embeddings from NPSV-deep (Fazel Amirvahedi)</b><br>
+  <b>Image embeddings from NPSV-deep </b><br>
   Encodes nine input channels used for structural variant classification:<br>
   1. Read allele assignment &nbsp;
   2. Haplotag &nbsp;
