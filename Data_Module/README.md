@@ -19,15 +19,21 @@ samtools faidx GCA_000001405.15_GRCh38_no_alt_analysis_set.fna
 echo "done indexing fasta"
 ```
 
-
-
+Deriving large SVs using Sniffles:
+```
+# Running Sniffles 2.6.3
+sniffles --input SAMPLE.haplotagged.bam --vcf HG002/sniffles_out/sniffles.vcf.gz --threads 12 --snf HG002/sniffles_out/sniffels.snf
+```
+Deriving large CNVs using Spectre
 ```
 # CNV (Spectre)
 aws s3 cp s3://ont-open-data/giab_2025.01/analysis/wf-human-variation/sup/HG002/PAW70337/output/SAMPLE.wf_cnv.vcf.gz   ./ --no-sign-request
 aws s3 cp s3://ont-open-data/giab_2025.01/analysis/wf-human-variation/sup/HG002/PAW70337/output/SAMPLE.wf_cnv.vcf.gz.tbi ./ --no-sign-request
 echo "done downloading Spectre VCF files"
+
+# Running Spectre
+spectre CNVCaller --coverage cov/coverage.regions.bed.gz --sample-id HG002 --output-dir ./spectre_out --reference GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz --blacklist grch38_blacklist_spectre.bed  --ploidy-chr chrX:1 --min-cnv-len 25000 --metadata spectre_out/metadata.mdr
 ```
-(We are generating CNVs from the newest version of software.)
 
 ### Visualizing data
 
