@@ -151,8 +151,10 @@ For each candidate CNV:
 
 #### Image Embedding from NPSV-deep 
 
-<img align="center" style="text-align: center" src="Image_Embedding_Module/variant0.png" alt="variant0" width="500"/>
-<img align="center" style="text-align: center" src="Image_Embedding_Module/variant2.png" alt="variant2" width="500"/>
+<img align="center" style="text-align: center" width="500" alt="image" src="Image_Embedding_Module/variant0.png" />
+<img align="center" style="text-align: center" width="500" alt="image" src="Image_Embedding_Module/variant2.png" />
+
+
 
 <p align="center">
   <b>Image embeddings from NPSV-deep </b><br>
