@@ -115,8 +115,9 @@ BAM data preprocess from CSV-Filter
 python bam2depth.py
 ```
 
+<img width="512" height="512" alt="image" src="Image_Encoding_Module/HG002_GRCh38_TP_chr22_50680403_50680489_DEL_86bp.png" />
 
-
+<img width="512" height="512" alt="image" src="Image_Encoding_Module/HG002_GRCh38_TP_chr22_50716010_50716092_DEL_82bp.png" />
 
 ## Module 4 ( Image Embeddings )
 
