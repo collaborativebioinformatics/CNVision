@@ -44,26 +44,33 @@ aws s3 cp s3://ont-open-data/giab_2025.01/analysis/wf-human-variation/sup/HG002/
 aws s3 cp s3://ont-open-data/giab_2025.01/analysis/wf-human-variation/sup/HG002/PAW70337/output/SAMPLE.haplotagged.cram.crai ./ --no-sign-request
 echo "done downloading samples-cram files"
 
-
-
 #reference fasta - GRCh38
 wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz
 echo "done downloading cram specific-fasta file"
 gunzip GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz 
 samtools faidx GCA_000001405.15_GRCh38_no_alt_analysis_set.fna
 echo "done indexing fasta"
+#converting the CRAM file to BAM file to solve file issues
+samtools view -@ 12 -T <GCA_000001405.15_GRCh38_no_alt_analysis_set.fa> -b -o SAMPLE.haplotagged.bam SAMPLE.haplotagged.cram
+samtools index SAMPLE.haplotagged.bam
 ```
 
 
-
+Deriving large SVs using Sniffles:
+```
+# Running Sniffles 2.6.3
+sniffles --input SAMPLE.haplotagged.bam --vcf HG002/sniffles_out/sniffles.vcf.gz --threads 12 --snf HG002/sniffles_out/sniffels.snf
+```
+Deriving large CNVs using Spectre
 ```
 # CNV (Spectre)
 aws s3 cp s3://ont-open-data/giab_2025.01/analysis/wf-human-variation/sup/HG002/PAW70337/output/SAMPLE.wf_cnv.vcf.gz   ./ --no-sign-request
 aws s3 cp s3://ont-open-data/giab_2025.01/analysis/wf-human-variation/sup/HG002/PAW70337/output/SAMPLE.wf_cnv.vcf.gz.tbi ./ --no-sign-request
 echo "done downloading Spectre VCF files"
-```
-(We are generating CNVs from the newest version of software.)
 
+# Running Spectre
+spectre CNVCaller --coverage cov/coverage.regions.bed.gz --sample-id HG002 --output-dir ./spectre_out --reference GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz --blacklist grch38_blacklist_spectre.bed  --ploidy-chr chrX:1 --min-cnv-len 25000 --metadata spectre_out/metadata.mdr
+```
 
 
 
