@@ -133,6 +133,7 @@ python finetune.py \
 BAM data preprocess from CSV-Filter
 ```
 python bam2depth.py
+python Image_Encoding_Module/scripts/gen_RGB_images.py --input_dir tensors_data --output_dir images_data
 ```
 </br>
 
