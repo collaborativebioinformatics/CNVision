@@ -72,6 +72,17 @@ echo "done downloading Spectre VCF files"
 spectre CNVCaller --coverage cov/coverage.regions.bed.gz --sample-id HG002 --output-dir ./spectre_out --reference GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz --blacklist grch38_blacklist_spectre.bed  --ploidy-chr chrX:1 --min-cnv-len 25000 --metadata spectre_out/metadata.mdr
 ```
 
+
+### Visualizing data
+
+Use the `plot-svlen.R` to plot all SV lengths (>100nt) from a given VCF file. Requires `bcftools` and `Rscript` in your working environment.
+
+Example command to plot deletions (DEL) from a given VCF file: 
+```bash
+bcftools query -i 'SVTYPE="DEL"' -f '%INFO/SVLEN\n' <input>.vcf.gz | awk '{print $1}' | Rscript plot-svlen.R <output-prefix>
+```
+
+
 <img align="center" style="text-align: center" width="800" alt="image" src="Data_Module/del-length-histo.png" />
 
 
