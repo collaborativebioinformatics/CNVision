@@ -149,6 +149,28 @@ For each candidate CNV:
 </div>
 <div align="center" style="text-align: center"> <b> Figure </b>: Image generation from CIGAR strings as developed by Xia et al. (2024). Alignment patterns are extracted from CIGAR strings and developed into RGB images for convolutional neural network training. </div>
 
+#### Image Embedding from NPSV-deep 
+
+<p align="center">
+  <img src="Image_Encoding_Module/variant0.png" alt="variant0" width="400"/>
+  <img src="Image_Encoding_Module/variant2.png" alt="variant2" width="400"/>
+</p>
+
+<p align="center">
+  <b>Image embeddings from NPSV-deep (Fazel Amirvahedi)</b><br>
+  Encodes nine input channels used for structural variant classification:<br>
+  1. Read allele assignment &nbsp;
+  2. Haplotag &nbsp;
+  3. Base quality &nbsp;
+  4. Strand &nbsp;
+  5. Mapping quality &nbsp;
+  6. Fragment allele assignment &nbsp;
+  7. Alternate insert size &nbsp;
+  8. Reference insert size &nbsp;
+  9. Aligned bases (matched or soft-clipped)
+</p>
+
+
 
 ## Module 4 ( Image Embeddings )
 
