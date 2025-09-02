@@ -1,4 +1,4 @@
-# CNVision
+# CNVision+
 
 <img align="center" style="text-align: center" width="800" alt="image" src="Image_Embedding_Module/CNV.png" />
 
