@@ -206,7 +206,7 @@ These illustrate the alignment patterns around CNV loci and the visual separabil
 
 
 <p align="center">
-  <b>Image embeddings from NPSV-deep (Fazel Amirvahedi)</b><br>
+  <b>Image embeddings from NPSV-deep </b><br>
   Encodes nine input channels used for structural variant classification:<br>
   1. Read allele assignment &nbsp;
   2. Haplotag &nbsp;
